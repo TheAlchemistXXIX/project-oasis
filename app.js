@@ -1,0 +1,1 @@
+document.getElementById("app").innerHTML = "<p>Inventory tracker coming soon...</p>";
