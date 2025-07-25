@@ -8,7 +8,52 @@
 </head>
 <body>
   <h1>Project OASIS - Inventory Tracker</h1>
-  <div id="app"></div>
+
+  <!-- Inventory Form -->
+  <div class="container" id="inventory-section">
+    <form id="product-form">
+      <input id="product-name" placeholder="Product Name" required />
+      <input id="cost-price" type="number" placeholder="Cost Price" required />
+      <input id="quantity" type="number" placeholder="Quantity" required />
+      <input id="category" placeholder="Category" />
+      <input id="brand" placeholder="Brand" />
+      <input id="size" placeholder="Size" />
+      <input id="expiry-date" type="date" />
+      <input id="supplier" placeholder="Supplier" />
+      <input id="reorder-level" type="number" placeholder="Reorder Level" />
+      <button type="submit">Add Product</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search Products..." />
+
+    <table id="inventory-table">
+      <thead>
+        <tr>
+          <th>Name</th><th>Category</th><th>Brand</th><th>Size</th><th>Supplier</th>
+          <th>Expiry</th><th>Reorder Level</th><th>Cost</th><th>VAT</th>
+          <th>Shelf Price</th><th>Qty</th><th>Total</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="pagination"></div>
+    <div id="dashboard-summary"></div>
+    <button id="export-btn">Export to CSV</button>
+    <button id="pdf-btn">Export to PDF</button>
+  </div>
+
+  <!-- VAT Calculator -->
+  <div class="container" id="vat-section" style="display:none;">
+    <h2>VAT Calculator</h2>
+    <input type="number" id="vat-base" placeholder="Enter Base Price" />
+    <button onclick="calculateVAT()">Calculate</button>
+    <p id="vat-result"></p>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
+
+
+.
